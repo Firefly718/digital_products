@@ -102,7 +102,9 @@ body {
         height: 50px;
         width: 37.5px;
         @include tr();
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             filter: drop-shadow(0px 0px 10px $shadow-color);
             transform: scale(1.2);
         }
@@ -202,7 +204,7 @@ body {
     }
     &__text {
         &:last-of-type {
-            margin: 30px 0 95px 0;
+            margin: 30px 0 0 0;
         }
         &--bold {
             font-weight: bold;
@@ -213,10 +215,9 @@ body {
     }
 }
 
-
-
 .btn {
     margin: 0 auto;
+    margin-top: 100px;
     text-align: center;
     display: block;
     width: 200px;
@@ -237,6 +238,9 @@ body {
         color: $title-color;
     }
 }
+
+
+
 
 
 
@@ -439,6 +443,10 @@ body {
             background-color: $bg-color;
             background-blend-mode: overlay;
             background-repeat: no-repeat;
+            &:last-child {
+                font-weight: 700; 
+                font-style: normal;
+            }
             @include tr();
             &:hover,
             &:focus {
@@ -477,7 +485,6 @@ body {
         } 
     }
     &__card {
-    cursor: pointer;
     top: 0;
     left: 0;
     width: 100%;
@@ -515,15 +522,11 @@ body {
 //--------------------------------------------------WORKS
 .works {
     background-color: $bg-color;
-    background-image: url(../img/works/bg-works.jpg);
+    background-image: url(../img/works/bgFog.jpg);
     background-size: cover;
     color: $title-color;
     padding-bottom: 5.6rem;
     padding-top: 5rem;
-    opacity: 0.8;
-    z-index: 1;
-    background-color: $bg-color;
-    background-blend-mode: overlay;
     background-repeat: no-repeat;
     &__header {
         font-family: ProximaNova, sans-serif;
@@ -536,8 +539,6 @@ body {
     &__icon {
         height: 7rem;
         width: 7rem;
-        // padding-top: 4.5rem;
-        // padding-left: 4.5rem;
         @include tr();
         &:hover {
             filter: drop-shadow(0px 0px 2px $shadow-color);
@@ -571,27 +572,9 @@ body {
             box-shadow: 0px 0px 10px 3px $shadow-color;
         }
     }
-    &__btn {
-        margin: 10rem auto 0 auto;
-        text-align: center;
-        display: block;
-        width: 200px;
-        padding: 15px 5px;
-        font-family: 'PT Sans', sans-serif;
-        font-style: italic;
-        text-decoration: none;
-        border: 1px solid $title-color;
+    .btn {
+        border-color: $title-color;
         color: $title-color;
-        @include tr();
-        &:hover,
-        &:active,
-        &:focus {
-            -webkit-box-shadow: 0px 0px 10px 3px $shadow-color;
-            -moz-box-shadow: 0px 0px 10px 3px $shadow-color;
-            box-shadow: 0px 0px 10px 3px $shadow-color;
-            background-color: $bg-color;
-            color: $title-color;
-        }
     }
 }
 
@@ -623,11 +606,19 @@ body {
             top: -40%;
         }
         &--social {
-            padding: 20px 15%;
+            padding: 20px 42px;
             width: 100%;
             display: flex;
-            justify-content: space-around;
-            background-color: $bg-color;
+            justify-content: space-between;
+            background-color: $main-color;
+        }
+        &--short {
+            padding: 20px 92px;
+        }
+        &--footer {
+            width: 30rem;
+            padding: 0;
+            margin-left: 25px;
         }
     } 
     &__skills {
@@ -640,7 +631,7 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         margin: 0;
-        color: #9f9acf;
+        color: $main-color;
         font-size: 2.4rem;
         padding: 0 5px;
         max-height: 65px;
@@ -672,7 +663,7 @@ body {
             color: $body-color;
         }
         .fab {
-            color:  $bg-color;
+            color:  $main-color;
             @include tr;
         }
     }
@@ -702,6 +693,8 @@ body {
         width: 50px;
         height: 60px;
         padding-left: 20px;
+        @include tr();
+        @include hoverIcon;
     }
     &__icon {
         position: absolute;
@@ -723,29 +716,6 @@ body {
         margin: 0 auto;
         padding-top: 120px;
         text-transform: uppercase;
-    }
-    &__btn {
-        width: 85px;
-        height: 85px;
-        position: absolute;
-        background: $bg-color;
-        opacity: .5;
-        background-image: url(../img/arrow-top.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        left: 85%;
-        bottom: 9%;
-        @include tr;
-        animation-name: topDrag;
-        animation-delay: 3s;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        &:hover,
-        &:active {
-            opacity: 1;
-            filter: drop-shadow(0px 0px 5px $shadow-color);
-            box-shadow: inset (0px 0px 15px 5px $shadow-color);
-        }   
     } 
     &__address,
     &__phone {
@@ -777,7 +747,7 @@ body {
         width: 30%;
         height: 90px;
         &--icon {
-            background-color: $bg-color;
+            background-color: $main-color;
             width: 90px;
             display: flex;
             align-items: center;
@@ -792,18 +762,18 @@ body {
         width: 70%;
         line-height: 1;
         align-self: center;
-        background-color: rgba(217,216,227, .7);
+        background-color: $input-color;
+        opacity: .7;
         text-decoration: none;
         &:hover,
         &:active,
         &:focus {
-            color: $bg-color;
             box-shadow: 0px 0px 25px 5px $shadow-color;
         }
     }
 }
 .map {
-    background-color: $bg-color;
+    background-color: $main-color;
     height: 900px;
     width: 100%;
     opacity: .5;
@@ -831,12 +801,13 @@ body {
         border: none;
         border-radius: 5px;
         width: 45%;
-        background-color: rgba(235,235,235, .5);
+        background-color: $input-color;
         padding: 20px 25px;
         @include tr;
         transition: transform  linear .2s;
         &:hover {
-           background-color: rgba(235,235,235, .8); 
+           background-color: $input-color; 
+           opacity: .7;
         }
         &:active +.form__star,
         &:focus +.form__star {
@@ -845,6 +816,7 @@ body {
     }    
     &__text {
         width: 100%;
+        height: 20rem;
         padding: 25px;
         margin-top: 25px;
     }
@@ -856,6 +828,10 @@ body {
         font-style: italic;
         font-family: 'PT Sans', sans-serif;
         @include tr;
+        &:after {
+            content: ' *';
+            color: #000;
+        }
         &--email {
             left: 60%;
         }
@@ -870,7 +846,7 @@ body {
     &__btn {
         margin: 55px auto 0 auto;
         cursor: pointer;
-        background-color: $bg-color;
+        background-color: $main-color;
         border: none;
         border-bottom: 4px solid #8783b0;
         border-radius: 5px;
@@ -883,8 +859,8 @@ body {
         &:hover,
         &:focus,
         &:active {
-            text-shadow: 0px 0px 10px $shadow-color;
-            border-bottom: 4px solid $shadow-color;
+            text-shadow: 1px 1px 2px $text-color;
+            border-bottom: 4px solid $bg-color;
         }
     }
 }
@@ -907,34 +883,33 @@ body {
 //--------------------------------------------------FOOTER
 .footer {
     padding: 7.5rem 3rem;
-    background-color: $bg-color;   
+    background-color: $main-color;
     &__wrap {
         display: flex;
         justify-content: space-between;
-    }
-    &__links {
-        list-style: none;
-        display: flex;
         align-items: center;
-    }
-    &__link svg {
-        border-radius: 50%;
-        fill: $body-color;
-        margin-left: 2.5rem;
-        @include tr();
-        &:hover {
-            box-shadow: 0px 0px 5px 3px $shadow-color;
-            box-shadow: inset (0px 0px 5px 3px $shadow-color);
-            transform: scale(1.3);
-        }
     }
     &__copyright {
         font-family: 'PT Sans', sans-serif;
         color: $title-color;
     }
-    &__text {
-        &--bold {
-            font-weight: bold;
+    &__developer {
+        display: inline-block;
+        text-decoration: none;
+        color: $title-color;
+        font-weight: bold;
+        cursor: pointer;
+        @include tr();
+        &:hover,
+        &:focus,
+        &:active {
+            height: 50px;
+            transform: translateY(-30px) scale(1.7);
+            color: $title-color;
+            text-shadow: 3px 3px 1px $bg-color;
         }
+    }
+    &__links {
+        padding: 0;
     }
 }
