@@ -308,10 +308,6 @@ template {
 [hidden] {
   display: none; }
 
-@media screen and (max-width: 1024px) {
-  .header__links {
-    margin-right: 25rem; } }
-
 /* Slider */
 .slick-slider {
   position: relative;
@@ -422,6 +418,9 @@ body {
   font-size: 1.8rem;
   line-height: 1.6;
   color: #333; }
+  @media screen and (max-width: 1024px) {
+    body {
+      overflow-x: hidden; } }
 
 .container {
   max-width: 1170px;
@@ -440,6 +439,9 @@ body {
   background-color: #6b688a;
   background-blend-mode: overlay;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1024px) {
+    .header {
+      background-size: 80% 80%; } }
   .header__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -456,6 +458,9 @@ body {
     -webkit-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in; }
+    @media screen and (max-width: 1024px) {
+      .header__nav {
+        width: 20%; } }
   .header__logo {
     height: 50px;
     width: 50px;
@@ -504,19 +509,29 @@ body {
     text-align: center;
     margin: 0 auto;
     padding-top: calc(100vh - 80vh); }
+    @media screen and (max-width: 1024px) {
+      .header__block {
+        width: 70%;
+        margin-right: 28%; } }
   .header__title {
     text-transform: uppercase;
     font-family: 'ProximaNova';
     font-weight: 700;
-    font-size: 7.2rem;
+    font-size: 72rem;
     color: #fefefb;
     margin: 0; }
+    @media screen and (max-width: 1024px) {
+      .header__title {
+        font-size: 4rem; } }
   .header__subtitle {
     font-family: 'PT Sans', sans-serif;
     color: #fefefb;
     font-size: 3rem;
     font-style: italic;
     margin: 0; }
+    @media screen and (max-width: 1024px) {
+      .header__subtitle {
+        font-size: 2rem; } }
 
 .about {
   background-color: #ebebeb;
