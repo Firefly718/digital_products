@@ -336,14 +336,19 @@ body {
     &.slick-prev {
         left: -5%;
         transform: translateY(-50%) rotate(180deg);
+        @media screen and (max-width: 1024px) {
+            margin-left: 5%;
+        }
         &:hover,
         &:active  {
             transform: translateY(-50%) rotate(180deg) scale(1.3);
         }
     }
-
     &.slick-next {
         right: -5%;
+        @media screen and (max-width: 1024px) {
+            margin-right: 5%;
+        }
     }
     
 }
@@ -365,7 +370,10 @@ body {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQwLjgyMyAyNDAuODIzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNDAuODIzIDI0MC44MjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBpZD0iQ2hldnJvbl9SaWdodF8xXyIgZD0iTTE4My4xODksMTExLjgxNkw3NC44OTIsMy41NTVjLTQuNzUyLTQuNzQtMTIuNDUxLTQuNzQtMTcuMjE1LDBjLTQuNzUyLDQuNzQtNC43NTIsMTIuNDM5LDAsMTcuMTc5ICAgbDk5LjcwNyw5OS42NzFsLTk5LjY5NSw5OS42NzFjLTQuNzUyLDQuNzQtNC43NTIsMTIuNDM5LDAsMTcuMTkxYzQuNzUyLDQuNzQsMTIuNDYzLDQuNzQsMTcuMjE1LDBsMTA4LjI5Ny0xMDguMjYxICAgQzE4Ny44ODEsMTI0LjMxNSwxODcuODgxLDExNi40OTUsMTgzLjE4OSwxMTEuODE2eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCIgc3R5bGU9ImZpbGw6IzdBNzQ3NSI+PC9wYXRoPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=);
     &--left {
         left: -8%;
-        transform: translateY(-50%) rotate(180deg);  
+        transform: translateY(-50%) rotate(180deg);
+        @media screen and (max-width: 1024px) {
+            left: -6%;
+        }
         &:hover,
         &:active  {
             transform: translateY(-50%) rotate(180deg) scale(1.3);
@@ -373,6 +381,9 @@ body {
     }
     &--right {
         right: -8%;
+        @media screen and (max-width: 1024px) {
+            right: -6%;
+        }
     }
 } 
 
@@ -886,6 +897,9 @@ body {
     left: 87%;
     bottom: 9%;
     @include tr;
+    @media screen and (max-width: 1024px) {
+        left: 85%;
+    }
     &:hover,
     &:active {
         opacity: 1;
