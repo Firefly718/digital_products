@@ -1066,7 +1066,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     width: 350px;
     position: absolute;
-    right: -245px;
+    right: -255px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1079,6 +1079,9 @@ body {
     transition: transform ease-in .5s;
     transition: transform ease-in .5s, -webkit-transform ease-in .5s, -o-transform ease-in .5s;
     cursor: pointer; }
+    @media screen and (max-width: 1024px) {
+      .contact__address, .contact__phone {
+        right: -25%; } }
     .contact__address:hover, .contact__address:focus, .contact__phone:hover, .contact__phone:focus {
       -webkit-transform: translateX(-230px);
       -ms-transform: translateX(-230px);
@@ -1242,7 +1245,7 @@ body {
   transition: all .3s ease-in; }
   @media screen and (max-width: 1024px) {
     .scroll-btn {
-      left: 85%; } }
+      left: 77%; } }
   .scroll-btn:hover, .scroll-btn:active {
     opacity: 1;
     background-color: #6b688a;

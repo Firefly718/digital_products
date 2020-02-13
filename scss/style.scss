@@ -745,11 +745,14 @@ body {
         font-family: 'PT Sans', sans-serif;
         width: 350px;
         position: absolute; 
-        right: -245px;
+        right: -255px;
         display: flex;
         justify-content: center;
         transition: transform ease-in .5s;
         cursor: pointer;
+        @media screen and (max-width: 1024px) {
+            right: -25%;
+        }
         &:hover,
         &:focus {
             transform: translateX(-230px);
@@ -898,7 +901,7 @@ body {
     bottom: 9%;
     @include tr;
     @media screen and (max-width: 1024px) {
-        left: 85%;
+        left: 77%;
     }
     &:hover,
     &:active {
