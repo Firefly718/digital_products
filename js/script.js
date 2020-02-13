@@ -84,16 +84,4 @@ $(".form__text").unbind().blur(function() {
             $(".form__star--text").removeClass("hide");
           }
 });          
-
-
-
-//--------------------------------------------------NAV -> SCROLL
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll >= 300) {
-        $(".nav").addClass("scrolling");
-    } else {
-        $(".nav").removeClass("scrolling");
-    }
-});
 }
