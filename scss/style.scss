@@ -877,17 +877,22 @@ body {
     }
 }
 
-@keyframes topDrag {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+.scroll-btn {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    background: $main-color url(../img/arrow-top.svg) no-repeat center;
+    opacity: .6;
+    left: 87%;
+    bottom: 9%;
+    @include tr;
+    &:hover,
+    &:active {
+        opacity: 1;
+        background-color: $bg-color;
+        box-shadow: inset (0px 0px 10px 3px $shadow-color)
+    }   
+} 
 
 
 
