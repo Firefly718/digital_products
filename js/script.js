@@ -57,7 +57,7 @@ function initMap() {
   let marker = new google.maps.Marker({
     position: markerPosition,
     map: map,
-    icon: '../img/marker.png',
+    icon: './img/marker.png',
     title: 'Ikan Piranha Atas 220C  Malang - East Java Indonesia'
   });
 

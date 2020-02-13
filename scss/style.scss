@@ -48,6 +48,12 @@ html {
     font-size: 10px;
     height: 100%;
     scroll-behavior: smooth;
+    @media screen and (max-width: 1024px) {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 768px) {
+        overflow-x: hidden;
+    }
 }
 
 body {
@@ -57,6 +63,9 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    @media screen and (max-width: 768px) {
+        overflow-x: hidden;
+    }
 }
 
 .container {
@@ -92,6 +101,9 @@ body {
         @include tr();
         @media screen and (max-width: 1024px) {
             width: 80%;
+        }
+        @media screen and (max-width: 768px) {
+            width: 30%;
         }
     }
     &__logo {
@@ -401,9 +413,11 @@ body {
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        @media screen and (max-width: 568px) {
-            grid-template-columns: 100%;
-            grid-template-rows: auto;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
         }
     }
     &__item {
@@ -411,10 +425,16 @@ body {
         text-align: center;
         padding: 100px 65px;
         min-height: 400px;
+        @media screen and (max-width: 768px) {
+            padding: 20px 12px;
+        }
         &--design {
             background-color: $grid-color;
             grid-area: 1 / 1 / 2 / 2;
             @include tr();
+            @media screen and (max-width: 768px) {
+                height: 200px;
+            }
             &:hover,
             &:focus {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $shadow-color;
@@ -425,6 +445,9 @@ body {
         &--web {
             grid-area: 1 / 2 / 2 / 3;
             @include tr();
+            @media screen and (max-width: 768px) {
+                height: 200px;
+            }
             &:hover,
             &:focus {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $bg-color;
@@ -435,6 +458,9 @@ body {
         &--seo {
             grid-area: 2 / 1 / 3 / 2;
             @include tr();
+            @media screen and (max-width: 768px) {
+                height: 200px;
+            }
             &:hover,
             &:focus {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $bg-color;
@@ -446,6 +472,9 @@ body {
             grid-area: 2 / 2 / 3 / 3;
             background-color: $grid-color;
             @include tr();
+            @media screen and (max-width: 768px) {
+                height: 200px;
+            }
             &:hover,
             &:focus {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $shadow-color;
@@ -456,7 +485,7 @@ body {
         &--services {
             grid-area: 1 / 3 / 4 / 4;
             padding: 115px 15px;
-            background-image: url(../img/services/service-bg.jpg);
+            background-image: url(/img/services/service-bg.jpg);
             background-size: cover;
             background-position-x: 70%;
             background-repeat: no-repeat;
@@ -466,6 +495,11 @@ body {
             background-color: $bg-color;
             background-blend-mode: overlay;
             background-repeat: no-repeat;
+            @media screen and (max-width: 768px) {
+                grid-area: 3 / 1 / 3 / 3;
+                height: 200px;
+                padding: 80px;
+            }
             &:last-child {
                 font-weight: 700; 
                 font-style: normal;
@@ -486,6 +520,9 @@ body {
             font-size: 3.5rem;
             font-family: ProximaNova;
             font-weight: 400;
+            @media screen and (max-width: 768px) {
+                font-size: 4.5rem;
+            }
         }
     }
     &__subtitle {
@@ -497,6 +534,9 @@ body {
         &--services {
             padding: 0;
             margin: 110px 0 0 0;
+            @media screen and (max-width: 768px) {
+                margin: 10px;
+            }
         }
     }
     &__icon {
@@ -545,7 +585,7 @@ body {
 //--------------------------------------------------WORKS
 .works {
     background-color: $bg-color;
-    background-image: url(../img/works/bgFog.jpg);
+    background-image: url(./img/works/bgFog.jpg);
     background-size: cover;
     color: $title-color;
     padding-bottom: 5.6rem;
@@ -586,6 +626,10 @@ body {
     &__img {
         max-width: 730px;
         max-height: 550px;
+        @media screen and (max-width: 768px) {
+            max-width: 530px;
+            max-height: 350px;
+        }
         @include tr();
         &:hover,
         &:active,
@@ -598,6 +642,7 @@ body {
     .btn {
         border-color: $title-color;
         color: $title-color;
+        margin-top: 70px;
     }
 }
 
@@ -637,6 +682,9 @@ body {
         }
         &--short {
             padding: 20px 92px;
+            @media screen and (max-width: 768px) {
+                padding: 20px 62px;
+            }
         }
         &--footer {
             width: 30rem;
@@ -716,14 +764,21 @@ body {
         width: 50px;
         height: 60px;
         padding-left: 20px;
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
         @include tr();
         @include hoverIcon;
     }
     &__icon {
         position: absolute;
         right: 45%;
-        top: 50px;
+        top: 20px;
         text-align: center;
+        @media screen and (max-width: 768px) {
+            right: 35%;
+            margin-top: -5px;
+        }
         &--phone {
             width: 40px;
             height: 40px;
@@ -737,7 +792,7 @@ body {
         color: $title-color;
         padding: 0;
         margin: 0 auto;
-        padding-top: 120px;
+        padding-top: 80px;
         text-transform: uppercase;
     } 
     &__address,
@@ -752,6 +807,9 @@ body {
         cursor: pointer;
         @media screen and (max-width: 1024px) {
             right: -25%;
+        }
+        @media screen and (max-width: 768px) {
+            right: -33%;
         }
         &:hover,
         &:focus {
@@ -882,6 +940,9 @@ body {
         color: $body-color;
         font-weight: bold;
         @include tr();
+        @media screen and (max-width: 768px) {
+            margin: 55px auto 0 0;
+        }
         &:hover,
         &:focus,
         &:active {
@@ -902,6 +963,9 @@ body {
     @include tr;
     @media screen and (max-width: 1024px) {
         left: 77%;
+    }
+    @media screen and (max-width: 768px) {
+        left: 74%;
     }
     &:hover,
     &:active {
