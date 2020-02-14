@@ -468,6 +468,64 @@ body {
     @media screen and (max-width: 768px) {
       .header__nav {
         width: 30%; } }
+    @media screen and (max-width: 425px) {
+      .header__nav {
+        padding-top: 1rem;
+        display: none; } }
+    .header__nav--mobile {
+      padding-top: 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+      font-family: 'ProximaNova';
+      font-weight: 700; }
+      .header__nav--mobile .burger {
+        width: 6rem;
+        height: 6rem;
+        font-size: 6rem;
+        position: relative;
+        right: 0%;
+        color: #fefefb;
+        display: block;
+        -webkit-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        transition: all .3s ease-in; }
+        .header__nav--mobile .burger:hover .burger__wrap,
+        .header__nav--mobile .burger:focus .burger__wrap,
+        .header__nav--mobile .burger:active .burger__wrap {
+          left: -150%;
+          -webkit-transition: left 1s;
+          -o-transition: left 1s;
+          transition: left 1s; }
+        .header__nav--mobile .burger__wrap {
+          position: absolute;
+          left: 140%;
+          top: 10%;
+          width: 22rem;
+          height: 33rem;
+          background: #665f60;
+          border: .5rem dashed #000;
+          border-radius: 6%;
+          -webkit-transition: left 1.5s;
+          -o-transition: left 1.5s;
+          transition: left 1.5s;
+          text-transform: uppercase; }
+          .header__nav--mobile .burger__wrap--link {
+            text-decoration: none;
+            font-family: 'ProximaNova';
+            font-weight: normal; }
+      @media screen and (min-width: 1024px) {
+        .header__nav--mobile {
+          display: none; } }
+      @media screen and (min-width: 768px) {
+        .header__nav--mobile {
+          display: none; } }
   .header__logo {
     height: 50px;
     width: 50px;
@@ -491,6 +549,8 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .header__link {
+    font-family: 'ProximaNova';
+    font-weight: 700;
     outline: none;
     margin-left: 3rem;
     text-decoration: none;

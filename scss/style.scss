@@ -105,6 +105,57 @@ body {
         @media screen and (max-width: 768px) {
             width: 30%;
         }
+        @media screen and (max-width: 425px) {
+            padding-top: 1rem;
+            display: none;
+        }
+        &--mobile {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-family: 'ProximaNova';
+            font-weight: 700;
+            .burger {
+                width: 6rem;
+                height: 6rem;
+                font-size: 6rem;
+                position: relative;
+                right: 0%;
+                color: $title-color;
+                display: block;
+                @include tr;
+                &:hover .burger__wrap,
+                &:focus .burger__wrap,
+                &:active .burger__wrap {
+                    left: -150%;
+                    transition: left 1s;
+                }
+                &__wrap {
+                    position: absolute;
+                    left: 140%;
+                    top: 10%;
+                    width: 22rem;
+                    height: 33rem;
+                    background: $text-color;
+                    border: .5rem dashed #000;
+                    border-radius: 6%;
+                    transition: left 1.5s;
+                    text-transform: uppercase;
+                    &--link {
+                        text-decoration: none;
+                        font-family: 'ProximaNova';
+                        font-weight: normal;
+                    }
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
     }
     &__logo {
         height: 50px;
@@ -129,6 +180,8 @@ body {
         justify-content: space-between;
     }
     &__link {
+        font-family: 'ProximaNova';
+        font-weight: 700;
         outline: none;
         margin-left: 3rem;
         text-decoration: none;
