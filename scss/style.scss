@@ -120,8 +120,7 @@ body {
         &:hover,
         &:focus,
         &:active {
-            filter: drop-shadow(0px 0px 10px $shadow-color);
-            transform: scale(1.2);
+            fill: $bg-color;
         }
     }
     &__links {
@@ -141,7 +140,7 @@ body {
         &:hover,
         &:focus,
         &:active {
-            text-shadow: 0px 0px 5px $shadow-color;
+            text-shadow: 4px 4px 2px $bg-color;
             transform: scale(1.2);
         }
     }
@@ -209,9 +208,6 @@ body {
         width: 60px;
         height: 60px;
         @include tr();
-        &:hover {
-            filter: drop-shadow(0px 0px 5px $shadow-color);
-        }
     }
     &__title {
         margin: 40px 0 0 0;
@@ -249,16 +245,13 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-style: italic;
     text-decoration: none;
-    color: #7d7a7c;
-    border: 2px solid #7d7a7c;
+    color: $text-color;
+    border: 2px solid $text-color;
     @include tr();
     &:hover,
     &:focus,
     &:active {
-        -webkit-box-shadow: 0px 0px 10px 3px $shadow-color;
-        -moz-box-shadow: 0px 0px 10px 3px $shadow-color;
-        box-shadow: 0px 0px 10px 3px $shadow-color;
-        background-color: $bg-color;
+        background-color: $text-color;
         color: $title-color;
     }
 }
@@ -312,7 +305,6 @@ body {
         &:active,
         &:focus {
             background-color: #fff;
-            filter: drop-shadow(0px 0px 5px $shadow-color);
         }
     }
     .slick-active button {
@@ -343,7 +335,7 @@ body {
     &:hover,
     &:active {
         transform: translateY(-50%) scale(1.3);
-        filter: drop-shadow(0px 0px 5px $shadow-color);
+        filter: drop-shadow(0px 0px 5px $bg-color);
     }
     &.slick-prev {
         left: -5%;
@@ -437,9 +429,9 @@ body {
             }
             &:hover,
             &:focus {
-                -webkit-box-shadow: inset 0px 0px 75px 5px $shadow-color;
-                -moz-box-shadow: inset 0px 0px 75px 5px $shadow-color;
-                box-shadow: inset 0px 0px 75px 5px $shadow-color;
+                -webkit-box-shadow: inset 0px 0px 75px 5px $text-color;
+                -moz-box-shadow: inset 0px 0px 75px 5px $text-color;
+                box-shadow: inset 0px 0px 75px 5px $text-color;
             }
         }
         &--web {
@@ -477,9 +469,9 @@ body {
             }
             &:hover,
             &:focus {
-                -webkit-box-shadow: inset 0px 0px 75px 5px $shadow-color;
-                -moz-box-shadow: inset 0px 0px 75px 5px $shadow-color;
-                box-shadow: inset 0px 0px 75px 5px $shadow-color;
+                -webkit-box-shadow: inset 0px 0px 75px 5px $text-color;
+                -moz-box-shadow: inset 0px 0px 75px 5px $text-color;
+                box-shadow: inset 0px 0px 75px 5px $text-color;
             }
         }
         &--services {
@@ -507,9 +499,9 @@ body {
             @include tr();
             &:hover,
             &:focus {
-                -webkit-box-shadow: inset 0px 0px 100px 5px $shadow-color;
-                -moz-box-shadow: inset 0px 0px 100px 5px $shadow-color;
-                box-shadow: inset 0px 0px 100px 5px $shadow-color;
+                -webkit-box-shadow: inset 0px 0px 100px 5px $text-color;
+                -moz-box-shadow: inset 0px 0px 100px 5px $text-color;
+                box-shadow: inset 0px 0px 100px 5px $text-color;
             }
         }
     }
@@ -603,13 +595,6 @@ body {
         height: 7rem;
         width: 7rem;
         @include tr();
-        &:hover {
-            filter: drop-shadow(0px 0px 2px $shadow-color);
-            transform: translate(0, 20px);
-            -webkit-transform: translate(0, 20px);
-            -o-transform: translate(0, 20px);
-            -moz-transform: translate(0, 20px);
-        }
     }
     &__title {
         color: $title-color;
@@ -634,9 +619,9 @@ body {
         &:hover,
         &:active,
         &:focus {
-            -webkit-box-shadow: 0px 0px 10px 3px $shadow-color;
-            -moz-box-shadow: 0px 0px 10px 3px $shadow-color;
-            box-shadow: 0px 0px 10px 3px $shadow-color;
+            -webkit-box-shadow: 0px 0px 10px 3px $title-color;
+            -moz-box-shadow: 0px 0px 10px 3px $title-color;
+            box-shadow: 0px 0px 10px 3px $title-color;
         }
     }
     .btn {
@@ -724,9 +709,6 @@ body {
             transform: scale(1.2);
             background-color:  $bg-color;
             border-color: $body-color;
-            -webkit-box-shadow: 0px 0px 10px 3px $shadow-color;
-            -moz-box-shadow: 0px 0px 10px 3px $shadow-color;
-            box-shadow: 0px 0px 10px 3px $shadow-color;
         }
         &:hover .fab,
         &:active .fab,
@@ -767,8 +749,6 @@ body {
         @media screen and (max-width: 768px) {
             padding: 0;
         }
-        @include tr();
-        @include hoverIcon;
     }
     &__icon {
         position: absolute;
@@ -849,11 +829,6 @@ body {
         background-color: $input-color;
         opacity: .7;
         text-decoration: none;
-        &:hover,
-        &:active,
-        &:focus {
-            box-shadow: 0px 0px 25px 5px $shadow-color;
-        }
     }
 }
 .map {
@@ -971,7 +946,6 @@ body {
     &:active {
         opacity: 1;
         background-color: $bg-color;
-        box-shadow: inset (0px 0px 10px 3px $shadow-color)
     }   
 } 
 
@@ -985,7 +959,7 @@ body {
     &__wrap {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
     &__copyright {
         font-family: 'PT Sans', sans-serif;
