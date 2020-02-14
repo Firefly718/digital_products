@@ -137,8 +137,8 @@ body {
                     top: 10%;
                     width: 22rem;
                     height: 33rem;
-                    background: $text-color;
-                    border: .5rem dashed #000;
+                    background: $grid-color;
+                    border: .5rem dashed $text-color;
                     border-radius: 6%;
                     transition: left 1.5s;
                     text-transform: uppercase;
@@ -146,6 +146,7 @@ body {
                         text-decoration: none;
                         font-family: 'ProximaNova';
                         font-weight: normal;
+                        color: $bg-color
                     }
                 }
             }
