@@ -569,7 +569,7 @@ body {
             }
         }
         &--mob {
-            grid-area: 4 / 2 / 4 / 5;
+            grid-area: 2 / 2 / 3 / 3;
             background-color: $grid-color;
             @include tr();
             @media screen and (max-width: 768px) {

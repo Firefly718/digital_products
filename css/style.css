@@ -911,7 +911,7 @@ body {
         -webkit-box-shadow: inset 0px 0px 75px 5px #6b688a;
         box-shadow: inset 0px 0px 75px 5px #6b688a; }
     .services__item--mob {
-      grid-area: 4 / 2 / 4 / 5;
+      grid-area: 2 / 2 / 3 / 3;
       background-color: #dbdbdb;
       -webkit-transition: all .3s ease-in;
       -o-transition: all .3s ease-in;

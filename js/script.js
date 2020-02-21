@@ -48,6 +48,19 @@ function initMap() {
     lat: -7.946573,
     lng: 112.600527
   }
+  
+  function myFunction(geoPosMobileL) {
+    if (geoPosMobileL.matches) {
+      geo = {
+        lat: -7.963919,
+        lng: 112.600527
+      }
+    } else {
+    }
+  }
+  let geoPosMobileL = window.matchMedia("(max-width: 425px)")
+  myFunction(geoPosMobileL)
+  geoPosMobileL.addListener(myFunction)
 
   let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
