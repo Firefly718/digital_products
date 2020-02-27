@@ -566,6 +566,11 @@ body {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $bg-color;
                 -moz-box-shadow: inset 0px 0px 75px 5px $bg-color;
                 box-shadow: inset 0px 0px 75px 5px $bg-color;
+                @media screen and (max-width: 425px) {
+                    -webkit-box-shadow: inset 0px 0px 75px 5px $text-color;
+                    -moz-box-shadow: inset 0px 0px 75px 5px $text-color;
+                    box-shadow: inset 0px 0px 75px 5px $text-color;
+                }
             }
         }
         &--mob {
@@ -584,6 +589,11 @@ body {
                 -webkit-box-shadow: inset 0px 0px 75px 5px $text-color;
                 -moz-box-shadow: inset 0px 0px 75px 5px $text-color;
                 box-shadow: inset 0px 0px 75px 5px $text-color;
+                @media screen and (max-width: 425px) {
+                    -webkit-box-shadow: inset 0px 0px 75px 5px $bg-color;
+                    -moz-box-shadow: inset 0px 0px 75px 5px $bg-color;
+                    box-shadow: inset 0px 0px 75px 5px $bg-color;
+                }
             }
         }
         &--services {
