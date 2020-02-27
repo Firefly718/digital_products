@@ -48,7 +48,7 @@ function initMap() {
     lat: -7.946573,
     lng: 112.600527
   }
-  
+  // responsive for 425px ---------------------------------------
   function myFunction(geoPosMobileL) {
     if (geoPosMobileL.matches) {
       geo = {
@@ -61,7 +61,7 @@ function initMap() {
   let geoPosMobileL = window.matchMedia("(max-width: 425px)")
   myFunction(geoPosMobileL)
   geoPosMobileL.addListener(myFunction)
-
+// ----------------------------------------------------------------
   let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
     center: geo,
