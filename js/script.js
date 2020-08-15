@@ -98,3 +98,9 @@ $(".form__text").unbind().blur(function() {
           }
 });          
 }
+//-------------------------------------------------- Burger-menu
+$(document).ready(function(){
+  $("#header > div > nav > i").click(function(){
+    $("#header > div > nav > div").toggle('slow', 'swing');
+  });
+});
