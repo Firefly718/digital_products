@@ -91,6 +91,12 @@ body {
     background-color: $bg-color;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    @media screen and (max-width: 653px) {
+        height: calc(100vh + 12rem);
+    }
+    @media screen and (max-width: 640px) { // Horizontal
+        height: calc(100vh + 7rem);
+    }
         &__nav {
         display: flex;
         align-items: center;
@@ -106,7 +112,7 @@ body {
             width: 100%;
             padding-top: 2.5rem;
         }
-        @media screen and (max-width: 549px) { // Horizontal
+        @media screen and (max-width: 640px) { // Horizontal
             padding-top: 2rem;
         }
         @media screen and (max-width: 425px) { // Vertical
@@ -130,8 +136,10 @@ body {
             order: -3;
             flex: 1 1 85%;
         }
+        @media screen and (max-width: 375px) {
+            flex: 1 1 80%;
+        }
         @media screen and (max-width: 320px) {
-            order: -3;
             flex: 1 1 78%;
         }
     }
@@ -150,27 +158,35 @@ body {
         display: flex;
         justify-content: space-between;
         @media screen and (max-width: 1024px) { // Vertical
-            width: 73%;
+            width: 90%; // 73
+        }
+        @media screen and (max-width: 823px) {
+            width: 80%;
         }
         @media screen and (max-width: 768px) { // Vertical
             // display: flex;
             margin: 0 1rem;
             padding: 0;
-            width: 85%;
+            width: 85%; //85
         }
-        @media screen and (max-width: 549px) { // Horizontal
+        @media screen and (max-width: 736px) { // Horizontal
             display: none;
-        }
-        @media screen and (max-width: 425px) { // Vertical
             width: auto;
             flex-direction: column;
             border: .2rem solid $bg-color;
-            border-radius: 1rem;
+            border-right: none;
+            border-radius: 1rem 0 0 1rem;
             background-color: rgba($color: #fff, $alpha: .9);
-            margin-top: 2rem;
+            margin-top: 4rem;
             position: absolute;
             top: 5rem;
-            right: -3rem;
+            right: -1rem;
+        }
+        @media screen and (max-width: 640px) { // Horizontal
+            margin-top: 4rem;
+        }
+        @media screen and (max-width: 425px) { // Vertical
+            margin-top: 2rem;
         }
     }
     &__link {
@@ -190,16 +206,24 @@ body {
             text-shadow: 4px 4px 2px $bg-color;
             transform: scale(1.2);
         }
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1024px) { // Vertical
             font-size: 3rem;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 823px) {
+            font-size: 2.5rem;
+        }
+        @media screen and (max-width: 768px) { // Vertical
             font-size: 2.4rem;
         }
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 736px) { // Horizontal
             margin: 1rem 5rem 1rem 2rem;
             color: $bg-color;
             display: block;
+        }
+        @media screen and (max-width: 425px) { // Vertical
+            // margin: 1rem 5rem 1rem 2rem;
+            // color: $bg-color;
+            // display: block;
             width: 80%;
             &:hover,
             &:focus,
@@ -216,6 +240,9 @@ body {
         padding-top: calc(100vh - 80vh);
         @media screen and (max-width: 1024px) {
             width: 70%;
+        }
+        @media screen and (max-width: 640px) {
+            padding-top: 10%;
         }
         @media screen and (max-width: 425px) {
             padding-top: 20%;
@@ -249,14 +276,27 @@ body {
 .burger {
     color: #fff;
     font-size: 5rem;
+    @media screen and (min-width: 768px) { // MIN
+        display: none;
+    }
+    @media screen and (max-width: 640px) {
+        margin-right: 1rem;
+    }
+    @media screen and (max-width: 736px) {
+        margin-right: 0;
+    }
+    @media screen and (max-width: 568px) {
+        margin-right: 0;
+    }
     @media screen and (max-width: 425px) { // MAX
         order: -2;
         flex: 1 1 10%;
         display: flex;
         justify-self: flex-end;
+        margin-right: 0;
     }
-    @media screen and (min-width: 768px) { // MIN
-        display: none;
+    @media screen and (max-width: 375px) {
+        margin-right: 0;
     }
 }
 
@@ -1031,6 +1071,9 @@ body {
         }
         @media screen and (max-width: 768px) {
             right: -33%;
+        }
+        @media screen and (max-width: 640px) { // Horizontal
+            right: -40%;
         }
         @media screen and (max-width: 425px) {
             right: -60%;
