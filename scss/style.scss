@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap');
 
 @font-face {
-    font-family: ProximaNova;
+    font-family: 'ProximaNova';
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
     font-weight: 300;
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-    font-family: ProximaNova;
+    font-family: 'ProximaNova';
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
     font-weight: 400;
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: ProximaNova;
+    font-family: 'ProximaNova';
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
     src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
     font-weight: 700;
@@ -57,7 +57,7 @@ html {
 }
 
 body {
-    font-family: ProximaNova;
+    font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
     min-height: 100%;
     font-size: 1.8rem;
     line-height: 1.6;
@@ -189,7 +189,7 @@ body {
         }
     }
     &__link {
-        font-family: 'ProximaNova';
+        font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
         font-weight: 700;
         outline: none;
         margin-left: 3rem;
@@ -246,7 +246,7 @@ body {
     }
     &__title {
         text-transform: uppercase;
-        font-family: 'ProximaNova';
+        font-family: 'ProximaNova', Arial, Helvetica, sans-serif;
         font-weight: 700;
         font-size: 7.2rem;
         color: $title-color;
@@ -256,7 +256,7 @@ body {
         }
     }
     &__subtitle {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         color: $title-color;
         font-size: 3rem;
         font-style: italic;
@@ -348,7 +348,7 @@ body {
     &__desc {
         width: 70%;
         padding: 75px 5% 0 10%;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         font-size: 2rem;
         line-height: 1.2;
         color: $text-color;
@@ -377,7 +377,7 @@ body {
     display: block;
     width: 200px;
     padding: 15px 5px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     font-style: italic;
     text-decoration: none;
     color: $text-color;
@@ -552,7 +552,7 @@ body {
 //--------------------------------------------------SERVICES
 .services {
     background-color: $body-color;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     &__wrap {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -911,18 +911,18 @@ body {
             @media screen and (max-width: 375px) { // Vertical
                 justify-content: space-around;
                 position: absolute;
-                bottom: -646%;
+                bottom: -1045%; //646
                 left: 50%;
                 transform: translateX(-50%);
                 // outline: 2px solid red;
             }
             @media screen and (max-width: 320px) { // Vertical
-                bottom: -650%;
+                bottom: -1050%; //650
             }
         }
     } 
     &__skills {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         margin: 35px 50px;
         font-size: 2.4rem;
         font-style: italic;
@@ -1046,7 +1046,7 @@ body {
     } 
     &__address,
     &__phone {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         width: 350px;
         position: absolute; 
         right: -255px;
@@ -1180,7 +1180,7 @@ body {
         color: $body-color;
         font-weight: 400;
         font-style: italic;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         @include tr;
         &:after {
             content: ' *';
@@ -1316,7 +1316,7 @@ body {
         }
     }
     &__copyright {
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'PT Sans', Arial, Helvetica, sans-serif;
         color: $title-color;
         @media screen and (max-width: 425px) { // Vertical
             margin: 3.8rem 0 0 0;
